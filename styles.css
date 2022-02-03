@@ -6,7 +6,7 @@ main {
     position: absolute;
     top: -30px;
     left: -140px;
-
+    animation: movePacman 5s;
     z-index: 5;
 }
 .pacman-top, .pacman-bottom {
@@ -26,11 +26,11 @@ main {
 
 .pacman-top {
     border-radius: 500px 500px 0 0;
-    animation-name: spin;
-    animation-duration: 1000ms;
+    animation: spin 1s alternate infinite linear;
+    /* animation-duration: 1000ms;
     animation-direction: alternate;
     animation-iteration-count: infinite;
-    animation-timing-function: linear;
+    animation-timing-function: linear; */
 }
 
 @keyframes spin { 
@@ -48,6 +48,15 @@ main {
         transform: rotate(30deg); 
     }
 }
+
+@keyframes movePacman{
+    0% {
+    transform: translateX(0);
+    }
+    100% {
+    transform: translateX(100%);
+    }
+  }
 
 .text-container {
     position: absolute;
