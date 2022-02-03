@@ -6,7 +6,7 @@ main {
     position: absolute;
     top: -30px;
     left: -140px;
-    animation: movePacman 900000000s;
+    animation: movePacman 3s;
     animation-delay: 5s;
     z-index: 5;
 }
@@ -55,7 +55,7 @@ main {
     transform: translateX(0);
     }
     100% {
-    transform: translateX(150000000000%);
+    transform: translateX(100%);
     }
   }
 
