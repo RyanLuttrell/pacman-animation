@@ -5,11 +5,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
+    <script src="scripts.js"></script>
     <title>Document</title>
 </head>
 <body>
     <main>
-        <div class="pacman-container">
+        <div class="pacman-container" id='pacmanContainer'>
             <div class="pacman-top"></div>
             <div class="pacman-bottom"></div>
         </div>
@@ -18,5 +19,12 @@
             <h2>We Have The Playbook</h2>
         </div>
     </main>
+    <button class="shrink-button" id="pacmanShrinker">Testing</button>
 </body>
+<script>
+    const pacman = document.getElementById('pacmanContainer');
+    const button = document.getElementById('pacmanShrinker');
+
+    button.addEventListener("click", () => pacman.classList.add('pacman-shrink'));
+</script>
 </html>

@@ -4,34 +4,32 @@ main {
 
 .pacman-container {
     position: absolute;
-    top: -30px;
+    top: -40px;
     left: -140px;
-    animation: movePacman 3s;
-    animation-delay: 5s;
+    height: 1000px;
+    width: 1000px;
     z-index: 5;
 }
+
+.pacman-shrink {
+    animation: shrink 2s;
+    animation-fill-mode: forwards;
+}
+
 .pacman-top, .pacman-bottom {
-    height: 500px;
-    width: 1000px;
-    background-color: #FFFF00;
+    height: 50%;
+    width: 100%;
+    background-color: #FBD16F;
 }
 
 .pacman-bottom {
     border-radius: 0 0 500px 500px;
-    animation-name: spin-alternate;
-    animation-duration: 1000ms;
-    animation-direction: alternate;
-    animation-iteration-count: infinite;
-    animation-timing-function: linear;
+    animation: spin-alternate 1000ms linear infinite alternate;
 }
 
 .pacman-top {
     border-radius: 500px 500px 0 0;
     animation: spin 1s alternate infinite linear;
-    /* animation-duration: 1000ms;
-    animation-direction: alternate;
-    animation-iteration-count: infinite;
-    animation-timing-function: linear; */
 }
 
 @keyframes spin { 
@@ -64,5 +62,19 @@ main {
     right: 825px;
     top: 400px;
     z-index: -1;
+}
+
+@keyframes shrink {
+    from {
+        transform: scale(1);
+    }
+    to {
+        transform: scale(0.1);
+    }
+}
+
+.shrink-button {
+    position: absolute;
+    right: 0;
 }
 
